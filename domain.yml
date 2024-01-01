@@ -5,9 +5,52 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+
+slots:
+  # City
+  city:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: intent_name
+      conditions:
+      - active_loop: property_form
+        requested_slot: city
+  # Number of Rooms
+  numberOf_rooms:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: intent_name
+      conditions:
+      - active_loop: property_form
+        requested_slot: numberOf_rooms
+  # Number of Bathrooms
+  numberOf_bathrooms:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: intent_name
+      conditions:
+      - active_loop: property_form
+        requested_slot: numberOf_bathrooms
+  # Rent Range
+  rent_range:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: intent_name
+      conditions:
+      - active_loop: property_form
+        requested_slot: rent_range
+
+forms:
+  property_form:
+    required_slots:
+        - city
+        - numberOf_rooms
+        - numberOf_bathrooms
+        - rent_range
 
 responses:
   utter_greet:
