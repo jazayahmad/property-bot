@@ -69,6 +69,8 @@ responses:
   utter_goodbye:
   - text: "Thank you for using PropertyBot! 🏡 If you have any more questions in the future, feel free to ask. Goodbye and best of luck with your property search!"
   
+  utter_looking_for_property:
+  - text: "Ready to start the search? Let me ask you a couple of questions to find your perfect place"
   utter_ask_location:
   - text: "What location are you interested in for your new property? 🌍"
 
@@ -77,6 +79,9 @@ responses:
 
     utter_ask_rent_range:
   - text: "What's your budget or preferred price range for the property? 💰"
+
+  utter_details:
+  - text: "Thanks for providing the values \nLocation: {location} \nNumber of Rooms: {numberOf_rooms} \nRent Range: {rent_range}"
 
 session_config:
   session_expiration_time: 60

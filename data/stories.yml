@@ -2,3 +2,12 @@ version: "3.1"
 
 stories:
 
+- story: Property Inquiry Form
+  steps:
+  - intent: looking_for_property
+  - action: utter_looking_for_property
+  - action: property_form
+  - active_loop: property_form
+  - active_loop: null
+  - action: action_submit
+  - action: action_restart
