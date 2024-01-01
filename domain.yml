@@ -5,11 +5,15 @@ intents:
   - goodbye
   - affirm
   - deny
+  - looking_for_property
+  - inquire_location
+  - inquire_numOf_rooms
+  - rent_range
 
 entities:
 - location
 - numberOf_rooms
-- numberOf_bathrooms
+# - numberOf_bathrooms
 - rent_range
 
 slots:
@@ -18,7 +22,7 @@ slots:
     type: text
     mappings:
     - type: from_entity
-      entity: intent_name
+      entity: location
       conditions:
       - active_loop: property_form
         requested_slot: location
@@ -27,25 +31,25 @@ slots:
     type: text
     mappings:
     - type: from_entity
-      entity: intent_name
+      entity: numberOf_rooms
       conditions:
       - active_loop: property_form
         requested_slot: numberOf_rooms
-  # Number of Bathrooms
-  numberOf_bathrooms:
-    type: text
-    mappings:
-    - type: from_entity
-      entity: intent_name
-      conditions:
-      - active_loop: property_form
-        requested_slot: numberOf_bathrooms
+  # # Number of Bathrooms
+  # numberOf_bathrooms:
+  #   type: text
+  #   mappings:
+  #   - type: from_entity
+  #     entity: numberOf_bathrooms
+  #     conditions:
+  #     - active_loop: property_form
+  #       requested_slot: numberOf_bathrooms
   # Rent Range
   rent_range:
     type: text
     mappings:
     - type: from_entity
-      entity: intent_name
+      entity: rent_range
       conditions:
       - active_loop: property_form
         requested_slot: rent_range
@@ -55,12 +59,12 @@ forms:
     required_slots:
         - location
         - numberOf_rooms
-        - numberOf_bathrooms
+        # - numberOf_bathrooms
         - rent_range
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hello! 👋 Welcome to PropertyBot. Ready to find your perfect place? 🏡"
 
   utter_happy:
   - text: "Great, carry on!"

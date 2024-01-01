@@ -48,3 +48,43 @@ nlu:
     - don't like that
     - no way
     - not really
+
+### LOOKING FOR PROPERTY INTENT ###
+- intent: looking_for_property
+  examples: |
+    - Searching for a place to stay.
+    - Need a new home.
+    - Looking for a property.
+    - Hoping to find a place.
+    - Want to rent or buy a property.
+
+### LOCATION INTENT ###
+- intent: inquire_location
+  examples: |
+    - my location is [New York](location)
+    - location is [London](location)
+    - [dubai](location) is my location
+    - [Mumbai](location)
+    - [Islamabad](location)
+    - location [Toronto](location)
+
+### NUMBER OF ROOMS INTENT ###
+- intent: inquire_numOf_rooms
+  examples: |
+    - Looking for accommodation with [1 room](numberOf_rooms)
+    - Need a place with [2 rooms](numberOf_rooms)
+    - Seeking a rental property offering [3 rooms](numberOf_rooms)
+    - Interested in options with [4 rooms](numberOf_rooms)
+    - Exploring listings for places with [5 rooms](numberOf_rooms)
+    - [3 rooms](numberOf_rooms)
+    - [4 rooms](numberOf_rooms) would do
+    - [1 room](numberOf_rooms) is enough
+
+### RENT RANGE INTENT ###
+- intent: rent_range
+  examples: |
+    - Budget is between [$800 and $1000](rent_range)
+    - Looking for rent in the range of [$1200-$1500](rent_range)
+    - Interested in places with rent around [$600 to $800](rent_range)
+    - Searching for properties within the budget of [$1000 - $1200](rent_range)
+    - Need a rental within the range of [$900 to $1100](rent_range)
