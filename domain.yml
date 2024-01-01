@@ -6,16 +6,22 @@ intents:
   - affirm
   - deny
 
+entities:
+- location
+- numberOf_rooms
+- numberOf_bathrooms
+- rent_range
+
 slots:
-  # City
-  city:
+  # Location
+  location:
     type: text
     mappings:
     - type: from_entity
       entity: intent_name
       conditions:
       - active_loop: property_form
-        requested_slot: city
+        requested_slot: location
   # Number of Rooms
   numberOf_rooms:
     type: text
@@ -47,7 +53,7 @@ slots:
 forms:
   property_form:
     required_slots:
-        - city
+        - location
         - numberOf_rooms
         - numberOf_bathrooms
         - rent_range
@@ -56,21 +62,11 @@ responses:
   utter_greet:
   - text: "Hey! How are you?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
   utter_happy:
   - text: "Great, carry on!"
 
   utter_goodbye:
   - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
 
 session_config:
   session_expiration_time: 60
