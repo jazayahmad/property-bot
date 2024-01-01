@@ -10,4 +10,3 @@ stories:
   - active_loop: property_form
   - active_loop: null
   - action: action_submit
-  - action: action_restart

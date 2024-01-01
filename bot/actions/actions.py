@@ -19,7 +19,7 @@ class ValidatePropertyForm(Action):
 
         # All slots are filled.
         return [SlotSet("requested_slot", None)]
-class ActionSubmitCard(Action):
+class ActionSubmitProperty(Action):
     def name(self) -> Text:
         return "action_submit"
 

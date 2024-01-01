@@ -74,15 +74,18 @@ responses:
   utter_ask_location:
   - text: "What location are you interested in for your new property? 🌍"
 
-    utter_ask_numberOf_rooms:
+  utter_ask_numberOf_rooms:
   - text: "How many rooms are you looking for in your ideal property? 🛌"
 
-    utter_ask_rent_range:
+  utter_ask_rent_range:
   - text: "What's your budget or preferred price range for the property? 💰"
 
   utter_details:
   - text: "Thanks for providing the values \nLocation: {LOC} \nNumber of Rooms: {Rooms} \nRent Range: {Rent}"
 
+actions:
+  - action_submit
+  - action_restart
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
