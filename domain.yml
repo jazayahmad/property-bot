@@ -81,7 +81,7 @@ responses:
   - text: "What's your budget or preferred price range for the property? 💰"
 
   utter_details:
-  - text: "Thanks for providing the values \nLocation: {location} \nNumber of Rooms: {numberOf_rooms} \nRent Range: {rent_range}"
+  - text: "Thanks for providing the values \nLocation: {LOC} \nNumber of Rooms: {Rooms} \nRent Range: {Rent}"
 
 session_config:
   session_expiration_time: 60
